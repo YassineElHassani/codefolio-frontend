@@ -1,0 +1,159 @@
+/* Global App Styles */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A70A9;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8FABD4;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: #4A70A9 rgba(0, 0, 0, 0.1);
+  scrollbar-width: thin;
+}
+
+/* Glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth transitions */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Selection color */
+::selection {
+  background-color: #4A70A9;
+  color: #EFECE3;
+}
+
+::-moz-selection {
+  background-color: #4A70A9;
+  color: #EFECE3;
+}
+
+/* Animation utilities */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Form input focus states */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 112, 169, 0.1);
+}
+
+/* Disabled state */
+input:disabled,
+textarea:disabled,
+select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Button hover effects */
+button {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Link hover effects */
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #4A70A9;
+}
+
+/* Dark mode specific */
+.dark {
+  color-scheme: dark;
+}
+
+.light {
+  color-scheme: light;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.875rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+}
